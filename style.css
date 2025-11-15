@@ -7,7 +7,7 @@
     font-family: "Poppins",sans-serif;
 }
 body{
-    background: linear-gradient(90deg,white,rgb(96, 58, 250));
+    background: linear-gradient(90deg,white,rgb(73, 37, 231));
 }
 nav{
     display: flex;
@@ -23,13 +23,13 @@ nav{
 }
 
 .header h1{
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: 600;
     margin: 6px 0;
 }
 #p-div{
-    border: 1px solid rgb(14, 14, 14);
+    border: 1px solid rgb(84, 81, 81);
     margin: 30px 10px;
     padding: 10px;
     border-radius: 10px;
@@ -37,7 +37,7 @@ nav{
     text-align: center;
 }
 #p-div p{
-    color: black;
+    color: rgb(67, 64, 64);
 }
 @media (min-width: 768px) {
     nav{
