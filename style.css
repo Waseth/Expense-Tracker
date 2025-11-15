@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
 }
+body{
+    background: linear-gradient(90deg,white,rgb(60, 22, 214));
+}
 nav{
     display: flex;
     box-shadow: 0 6px 60px rgba(0, 0, 0, 0.15);
@@ -16,18 +19,17 @@ nav{
 }
 .header img{
     width: 40px;
-    background: white;
     margin-right: -10px;
 }
 
 .header h1{
-    color: rgb(225, 18, 225);
+    color: black;
     font-size: 20px;
     font-weight: 600;
     margin: 6px 0;
 }
 #p-div{
-    border: 1px solid rgb(158, 143, 143);
+    border: 1px solid rgb(14, 14, 14);
     margin: 30px 10px;
     padding: 10px;
     border-radius: 10px;
@@ -35,7 +37,7 @@ nav{
     text-align: center;
 }
 #p-div p{
-    color: rgb(225, 18, 225);
+    color: black;
 }
 @media (min-width: 768px) {
     nav{
@@ -44,6 +46,7 @@ nav{
     }
     #p-div{
         width: 600px;
+
         margin: 50px auto;
         padding: 20px;
         font-size: 15px;
