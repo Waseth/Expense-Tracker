@@ -35,9 +35,54 @@ nav{
     border-radius: 10px;
     font-size: 10px;
     text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 #p-div p{
     color: rgb(67, 64, 64);
+}
+.expense{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.expense input{
+    width: 60%;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+select{
+    padding: 8px;
+    border-radius: 8px;
+    width: 60%;
+    border: none;
+    color: grey;
+    font-size: 10px;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+    cursor: pointer;
+}
+.expense button{
+    margin-top: 10px;
+    padding: 8px;
+    width: 30%;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+.expense button:hover{
+    background: rgb(145, 123, 255);
+    color: black;
+    transition: 0.3s ease;
 }
 @media (min-width: 768px) {
     nav{
@@ -50,6 +95,24 @@ nav{
         margin: 50px auto;
         padding: 20px;
         font-size: 15px;
+    }
+    .expense{
+        gap: 15px;
+    }
+    .expense input{
+        width: 50%;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 12px;
+    }
+    select{
+        padding: 12px;
+        width: 50%;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .expense button{
+        width: 20%;
     }
 }
 
