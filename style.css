@@ -109,6 +109,7 @@ select{
     }
     .expense{
         gap: 15px;
+        padding-top: 45px;
     }
     .expense input{
         width: 90%;
