@@ -7,7 +7,7 @@
     font-family: "Poppins",sans-serif;
 }
 body{
-    background: linear-gradient(90deg,white,rgb(123, 93, 255));
+    background:rgb(27, 0, 149);
 }
 nav{
     display: flex;
@@ -21,15 +21,20 @@ nav{
     width: 40px;
     margin-right: -10px;
 }
-
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .header h1{
-    color: rgb(0, 0, 0);
+    color: rgb(98, 255, 0);
     font-size: 20px;
     font-weight: 600;
     margin: 6px 0;
 }
 #p-div{
-    border: 1px solid rgb(84, 81, 81);
+    /* border: 1px solid rgb(98, 255, 0); */
+    border: white solid 1px;
     margin: 30px 10px;
     padding: 10px;
     border-radius: 10px;
@@ -38,30 +43,40 @@ nav{
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 #p-div p{
-    color: rgb(67, 64, 64);
+    color: rgb(98, 255, 0);
+
+}
+#expense-header{
+    color: white;
+    text-align: center;
 }
 .expense{
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    margin: 10px 10px;
+    padding: 20px 5px;
+    width: 70%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 .expense input{
-    width: 60%;
+    width: 90%;
     text-align: left;
     font-size: 10px;
     font-weight: 400;
-    border-radius: 8px;
+    border-radius: 5px;
     outline: none;
-    border: none;
+    border: solid 1px rgb(199, 199, 199);
     padding: 8px;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 select{
     padding: 8px;
     border-radius: 8px;
-    width: 60%;
-    border: none;
+    width: 90%;
+    border: solid 1px rgb(199, 199, 199);
     color: grey;
     font-size: 10px;
     outline: none;
@@ -72,16 +87,17 @@ select{
 .expense button{
     margin-top: 10px;
     padding: 8px;
-    width: 30%;
-    background: rgb(255, 255, 255);
+    width: 90%;
+    background: rgb(98, 255, 0);
     border: none;
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    color: rgb(27, 0, 149);
 }
 .expense button:hover{
-    background: rgb(145, 123, 255);
-    color: black;
+    background: rgb(27, 0, 149);
+    color: rgb(98, 255, 0);
     transition: 0.3s ease;
 }
 @media (min-width: 768px) {
