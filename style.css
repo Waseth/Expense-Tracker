@@ -7,7 +7,6 @@
     font-family: "Poppins",sans-serif;
 }
 body{
-    /* background:rgb(27, 0, 149); */
     background:white;
 }
 nav{
@@ -24,27 +23,27 @@ nav{
 }
 
 .header h1{
-    /* color: rgb(98, 255, 0); */
     color: rgb(27, 0, 149);
     font-size: 20px;
     font-weight: 600;
     margin-top: 10px;
 }
 #p-div{
-    /* border: rgb(27, 0, 149)solid 1px; */
-    margin: 10px 10px;
+    border:rgb(27, 0, 149) solid 1px;
+    margin: 20px auto;
     padding: 10px;
     border-radius: 10px;
     font-size: 10px;
     text-align: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    width: 70%;
 }
 #p-div p{
-    color: rgb(27, 0, 149));
+    color: rgb(27, 0, 149);
 
 }
 #expense-header{
-    color: white;
+    color: rgb(27, 0, 149);
     text-align: center;
 }
 .expense{
@@ -103,7 +102,7 @@ select{
         justify-content: left;
     }
     #p-div{
-        width: 600px;
+        width: 70%;
         margin: 50px auto;
         padding: 20px;
         font-size: 15px;
@@ -123,18 +122,23 @@ select{
         padding: 12px;
         width: 90%;
         font-size: 15px;
-        font-weight: 500;
     }
     .expense button{
         width: 90%;
+    }
+    #expense-header{
+        font-weight: 900px;
     }
 }
 
 @media (min-width: 1024px) {
     #p-div{
-        width: 800px;
+        width: 50%;
         margin: 60px auto;
         padding: 25px;
-        font-size: 18px;
+        font-size: 15px;
+    }
+    .expense{
+        width: 40%;
     }
 }
