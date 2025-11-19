@@ -29,7 +29,7 @@
         </section>
 
         <!-- EXPENSE SECTION -->
-         <h2 id="expense-header">Enter expense details</h2>
+        <h2 id="expense-header">Enter expense details</h2>
         <section class="expense">
             <input type="text" placeholder="Expense Name">
             <input type="text" placeholder="Amount">
@@ -44,15 +44,23 @@
         </section>
 
         <!-- FILTER SECTION -->
-         <div class="dropdown">
-            <button onclick="toggleMenu()">Category</button>
-            <div id="menu">
-                <button>Food</button>
-                <button>Transport</button>
-                <button>Shopping</button>
-                <button>Other</button>
+        <h2 id="expense-header" style="margin-top: 15px;">Filter your expenses</h2>
+        <div id="duration">
+            <button class="btn">Daily</button>
+            <button class="btn">Weekly</button>
+            <button class="btn">Monthly</button>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="toggleMenu()" id="btn">Category</button>
+            <div id="menu" class="dropdown-menu">
+                <button class="menu">Food</button>
+                <button class="menu">Transport</button>
+                <button class="menu">Shopping</button>
+                <button class="menu">Other</button>
             </div>
-         </div>
+
+        </div>
 
 
 
