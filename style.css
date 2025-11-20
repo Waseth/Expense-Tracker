@@ -137,11 +137,15 @@ select{
     background: rgb(27, 0, 149);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 90%;
+    width: 95%;
     padding: 5px 0;
 }
 .dropdown-menu.show {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 .dropdown-menu button{
     width: 50px;
@@ -151,7 +155,7 @@ select{
     border: none;
     cursor: pointer;
     color: rgb(27, 0, 149);
-    margin-left:20px;
+    margin-top: 5px;
 }
 .btn{
     margin-top: 5px;
