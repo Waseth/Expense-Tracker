@@ -119,25 +119,24 @@ select{
     margin-top: 5px;
     padding: 8px;
     width: 90px;
-    background: rgb(27, 0, 149);
+    background: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    color:white;
+    color: rgb(27, 0, 149);
+    border: solid 1px rgb(27, 0, 149);
 }
 #btn:hover{
-    color: rgb(27, 0, 149);
-    background:white;
+    color:white;
+    background:rgb(27, 0, 149) ;
     transition: 0.3s ease;
     border: solid 1px rgb(27, 0, 149);
 }
 .dropdown-menu {
     margin-top: 10px;
     display: none;
-    background: rgb(27, 0, 149);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 95%;
+    width: 75%;
     padding: 5px 0;
 }
 .dropdown-menu.show {
@@ -154,8 +153,10 @@ select{
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    background: white;
     color: rgb(27, 0, 149);
-    margin-top: 5px;
+    margin: 3px 0;
+    border: solid 1px rgb(27, 0, 149);
 }
 .btn{
     margin-top: 5px;
@@ -179,7 +180,7 @@ select{
     border: solid 1px white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     nav{
         display: flex;
         justify-content: left;
@@ -212,6 +213,27 @@ select{
     #expense-header{
         font-weight: 900px;
     }
+    #duration{
+        gap: 30px;
+    }
+    .btn{
+        margin-top: 20px;
+        padding: 10px;
+        width: 130px;
+        font-size: 15px;
+    }
+    #btn{
+        margin-top: 20px;
+        padding: 10px;
+        width: 130px;
+        font-size: 15px;
+    }
+    .dropdown-menu button{
+        width: 90px;
+        font-size: 10px;
+        padding: 8px;
+        margin-left: 10px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -223,5 +245,20 @@ select{
     }
     .expense{
         width: 40%;
+    }
+    .btn{
+        padding: 15px;
+        width: 200px;;
+    }
+    #btn{
+        margin-top: 25px;
+        padding: 15px;
+        width: 200px;
+    }
+    .dropdown-menu button{
+        width: 120px;
+        font-size: 10px;
+        padding: 12px;
+        margin-left: 20px;
     }
 }
