@@ -179,6 +179,46 @@ select{
     background: rgb(27, 0, 149);
     border: solid 1px white;
 }
+.expense-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.expense-card{
+    box-shadow:0 6px 10px rgba(0, 0, 0, 0.15) ;
+    width: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 20px;
+}
+.expense-card button{
+    padding: 5px;
+    width: 70%;
+    background:red;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.expense-card button:hover{
+    background: white;
+    color: red;
+    border: red 1px solid;
+    transition: ease 0.3s;
+}
+.expense-text{
+    background-color: white;
+    color: rgb(27, 0, 149);
+    padding: 5px;
+    border: solid 1px rgb(27, 0, 149);
+    border-radius: 8px;
+    width: 70%;
+}
 
 @media (min-width: 600px) {
     nav{
