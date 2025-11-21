@@ -45,6 +45,8 @@ nav{
 #expense-header{
     color: rgb(27, 0, 149);
     text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 .expense{
     display: flex;
@@ -94,6 +96,7 @@ select{
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     color:white;
+    font-size: 10px;
 }
 .expense button:hover{
     color: rgb(27, 0, 149);
@@ -115,6 +118,9 @@ select{
     flex-direction: row;
     gap: 10px;
 }
+#duration button{
+    font-size: 10px;
+}
 #btn{
     margin-top: 5px;
     padding: 8px;
@@ -125,6 +131,7 @@ select{
     cursor: pointer;
     color: rgb(27, 0, 149);
     border: solid 1px rgb(27, 0, 149);
+    font-size: 10px;
 }
 #btn:hover{
     color:white;
@@ -181,29 +188,35 @@ select{
 }
 .expense-list{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin-top: 50px;
+    gap: 20px;
 }
 .expense-card{
     box-shadow:0 6px 10px rgba(0, 0, 0, 0.15) ;
-    width: 85%;
+    width: 40%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    padding-top: 20px;
+    padding: 20px 0;
+    border-radius: 10px;
+
 }
 .expense-card button{
     padding: 5px;
     width: 70%;
-    background:red;
+    background:rgb(158, 3, 3);
     border-radius: 10px;
     color: white;
     border: none;
-    margin-top: 10px;
+    margin-top: 3px;
     cursor: pointer;
+    font-size: 10px;
 }
 .expense-card button:hover{
     background: white;
@@ -212,12 +225,30 @@ select{
     transition: ease 0.3s;
 }
 .expense-text{
-    background-color: white;
-    color: rgb(27, 0, 149);
+    background-color: rgb(27, 0, 149);
+    color: white;
     padding: 5px;
     border: solid 1px rgb(27, 0, 149);
     border-radius: 8px;
     width: 70%;
+    cursor: pointer;
+    font-size: 10px;
+}
+.expense-text:hover{
+    background: white;
+    color:rgb(27, 0, 149);
+    transition: 0.3s ease;
+}
+#total-div{
+    border: solid 1px rgb(27, 0, 149);
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+#total{
+    font-size: 15px;
+    text-align: center;
+    color:rgb(27, 0, 149);
 }
 
 @media (min-width: 600px) {
