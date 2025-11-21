@@ -192,20 +192,19 @@ select{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    gap: 20px;
+    margin-top: 20px;
+    gap: 10px;
 }
 .expense-card{
-    box-shadow:0 6px 10px rgba(0, 0, 0, 0.15) ;
+    border: solid rgb(27, 0, 149) 1px;
     width: 40%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    padding: 20px 0;
+    padding: 20px;
     border-radius: 10px;
-
 }
 .expense-card button{
     padding: 5px;
@@ -260,7 +259,7 @@ select{
         width: 70%;
         margin: 50px auto;
         padding: 20px;
-        font-size: 15px;
+        font-size: 12px;
     }
     .expense{
         gap: 15px;
@@ -269,14 +268,14 @@ select{
     }
     .expense input{
         width: 90%;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 500;
         padding: 12px;
     }
     select{
         padding: 12px;
         width: 90%;
-        font-size: 15px;
+        font-size: 12px;
     }
     .expense button{
         width: 90%;
@@ -297,13 +296,23 @@ select{
         margin-top: 20px;
         padding: 10px;
         width: 130px;
-        font-size: 15px;
+        font-size: 12px;
     }
     .dropdown-menu button{
         width: 90px;
         font-size: 10px;
         padding: 8px;
         margin-left: 10px;
+    }
+    .expense-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 10px;
+    }
+    .expense-card{
+        flex: 1 1 calc(33.333% - 10px);
+        max-width: 200px;
     }
 }
 
@@ -312,24 +321,49 @@ select{
         width: 50%;
         margin: 60px auto;
         padding: 25px;
-        font-size: 15px;
+        font-size: 13px;
     }
     .expense{
         width: 40%;
     }
+    .expense input{
+        font-size: 13px;
+    }
+    #category{
+        font-size: 13px;
+    }
+    .expense button{
+        font-size: 13px;
+    }
+    #expense-header{
+        font-size: 20px;
+    }
+    #duration button{
+        font-size: 13px;
+    }
     .btn{
-        padding: 15px;
-        width: 200px;;
+        padding: 10px;
+        width: 150px;
+
     }
     #btn{
         margin-top: 25px;
-        padding: 15px;
-        width: 200px;
+        padding: 10px;
+        width: 150px;
     }
     .dropdown-menu button{
         width: 120px;
         font-size: 10px;
         padding: 12px;
         margin-left: 20px;
+    }
+    .expense-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .expense-card{
+        flex: 1 1 calc(25% - 20px);
+        max-width: 250px;
     }
 }
