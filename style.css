@@ -233,11 +233,6 @@ select{
     cursor: pointer;
     font-size: 10px;
 }
-.expense-text:hover{
-    background: white;
-    color:rgb(27, 0, 149);
-    transition: 0.3s ease;
-}
 #total-div{
     border: solid 1px rgb(27, 0, 149);
     width: 50%;
