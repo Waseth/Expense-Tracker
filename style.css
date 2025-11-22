@@ -361,4 +361,7 @@ select{
         flex: 1 1 calc(25% - 20px);
         max-width: 250px;
     }
+    #total-div{
+        width: 20%;
+    }
 }
