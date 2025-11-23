@@ -194,9 +194,11 @@ select{
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
+    padding: 40px 0;
+    border-radius: 10px;
 }
 .expense-card{
-    border: solid rgb(27, 0, 149) 1px;
+    /* border: solid rgb(27, 0, 149) 1px; */
     width: 40%;
     text-align: center;
     display: flex;
@@ -205,6 +207,7 @@ select{
     gap: 5px;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
 }
 .expense-card button{
     padding: 5px;
