@@ -30,9 +30,10 @@
 
         <!-- EXPENSE SECTION -->
         <h2 id="expense-header">Enter expense details</h2>
+        <div id="popup" class="popup"></div>
         <section class="expense">
-            <input type="text" placeholder="Expense Name">
-            <input type="text" placeholder="Amount">
+            <input type="text" placeholder="Expense Name" id="expense-name">
+            <input type="text" placeholder="Amount" id="amount">
             <select id="category">
                 <option value="" disabled selected>Category</option>
                 <option value="food">Food</option>
@@ -40,7 +41,7 @@
                 <option value="shopping">Shopping</option>
                 <option value="other">Other</option>
             </select>
-            <button>Add</button>
+            <button onclick="addExpense()">Add</button>
         </section>
 
         <!-- FILTER SECTION -->
@@ -62,7 +63,7 @@
         </div>
         <!-- EXPENSE LIST SECTION -->
          <div class="expense-list">
-            <div class="expense-card">
+            <!-- <div class="expense-card">
                 <div class="expense-text">Lunch</div>
                 <div class="expense-text">Food</div>
                 <div class="expense-text">Ksh 350</div>
@@ -103,11 +104,11 @@
                 <div class="expense-text">Ksh 350</div>
                 <div class="expense-text">Date</div>
                 <button>DELETE</button>
-            </div>
+            </div> -->
          </div>
 
          <div id="total-div">
-            <h1 id="total">TOTAL : KSH 3,000</h1>
+            <h1 id="total">TOTAL : KSH 0</h1>
          </div>
 
     </div>

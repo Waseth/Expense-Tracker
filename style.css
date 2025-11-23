@@ -48,6 +48,19 @@ nav{
     font-size: 15px;
     margin-bottom: 10px;
 }
+.popup{
+    color: white;
+    text-align: center;
+    background:red;
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+}
+.popup.show{
+    display: block;
+}
 .expense{
     display: flex;
     flex-direction: column;
@@ -198,7 +211,6 @@ select{
     border-radius: 10px;
 }
 .expense-card{
-    /* border: solid rgb(27, 0, 149) 1px; */
     width: 40%;
     text-align: center;
     display: flex;
@@ -207,11 +219,11 @@ select{
     gap: 5px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-.expense-card button{
+.delete-btn{
     padding: 5px;
-    width: 70%;
+    width: 80%;
     background:rgb(158, 3, 3);
     border-radius: 10px;
     color: white;
@@ -220,7 +232,7 @@ select{
     cursor: pointer;
     font-size: 10px;
 }
-.expense-card button:hover{
+.delete-btn:hover{
     background: white;
     color: red;
     border: red 1px solid;
@@ -232,7 +244,7 @@ select{
     padding: 5px;
     border: solid 1px rgb(27, 0, 149);
     border-radius: 8px;
-    width: 70%;
+    width: 80%;
     cursor: pointer;
     font-size: 10px;
 }
