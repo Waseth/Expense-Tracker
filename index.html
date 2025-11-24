@@ -17,6 +17,7 @@
                 <img src="logo.png" alt="logo">
                 <h1>xpensify</h1>
             </nav>
+            
             <div id="p-div">
                 <p class="expensify-paragraph">
                     Keep your finances under control with Expensify. Easily add and categorize every expense, monitor
@@ -36,10 +37,10 @@
             <input type="text" placeholder="Amount" id="amount">
             <select id="category">
                 <option value="" disabled selected>Category</option>
-                <option value="food">Food</option>
-                <option value="transport">Transport</option>
-                <option value="shopping">Shopping</option>
-                <option value="other">Other</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
             </select>
             <button onclick="addExpense()">Add</button>
         </section>
@@ -60,9 +61,11 @@
                 <button class="menu">Shopping</button>
                 <button class="menu">Other</button>
             </div>
+            <button id="show-all">Show All</button>
         </div>
+
         <!-- EXPENSE LIST SECTION -->
-         <div class="expense-list">
+        <div class="expense-list">
             <!-- <div class="expense-card">
                 <div class="expense-text">Lunch</div>
                 <div class="expense-text">Food</div>
@@ -105,11 +108,11 @@
                 <div class="expense-text">Date</div>
                 <button>DELETE</button>
             </div> -->
-         </div>
+        </div>
 
-         <div id="total-div">
+        <div id="total-div">
             <h1 id="total">TOTAL : KSH 0</h1>
-         </div>
+        </div>
 
     </div>
 
