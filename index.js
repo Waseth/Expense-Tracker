@@ -16,8 +16,6 @@ function toggleMenu() {
 }
 
 
-
-
 function addExpense() {
     // Get the values of the input fields
     let expenseInput = expense.value.trim();// .trim() helps eliminate invalid inputs like spaces
@@ -67,6 +65,7 @@ function addExpense() {
     expenseCard.expenseNameStore = expenseInput;
     expenseCard.categoryStore = categorySelect;
     expenseCard.amountValueStore = numberInput;
+    expenseCard.dateStore = new Date().toISOString().split("T")[0];
 
     // Create expense button
     let expenseBtn = document.createElement("button");
@@ -137,7 +136,78 @@ function filterByCategory(selectedCategory) {
     showAllBtn.style.display = "block";
 };
 
-//Logid to show all cards and reset totals when showall button is clicked
+// Daily filter
+function dailyFilter(){
+    let allCards = document.querySelectorAll(".expense-card");
+    let today = new Date().toISOString().split("T")[0];
+    let filteredTotal = 0;
+
+    allCards.forEach( card =>{
+        if(card.dateStore === today){
+            card.style.display = "flex";
+            filteredTotal = filteredTotal + card.amountValueStore;
+        }else{
+            card.style.display = "none";
+        }
+    })
+    total.textContent = "TOTAL : KSH " + filteredTotal.toLocaleString();
+    showAllBtn.style.display = "block";
+    showAllBtn.style.marginTop = "15px"
+}
+
+// Weekly filter
+function weeklyFilter(){
+    let allCards = document.querySelectorAll(".expense-card");
+    let today = new Date();
+    let filteredTotal = 0;
+
+    allCards.forEach(card => {
+        let cardDate = new Date(card.dateStore);
+        let diffDays = (today - cardDate) / (1000 * 60 * 60 * 24);
+
+        if (isNaN(cardDate)) {
+            card.style.display = "none";
+            return;
+        }
+
+        if(diffDays >=0 && diffDays <= 7){
+            card.style.display = "flex";
+            filteredTotal = filteredTotal + card.amountValueStore;
+        }else{
+            card.style.display = "none";
+        }
+    });
+    total.textContent = "TOTAL : KSH " + filteredTotal.toLocaleString();
+    showAllBtn.style.display = "block";
+    showAllBtn.style.marginTop = "15px"
+}
+
+// Monthly filter
+function monthlyFilter(){
+    let allCards = document.querySelectorAll(".expense-card");
+    let today = new Date();
+    let filteredTotal = 0;
+
+    allCards.forEach(card => {
+        let cardDate = new Date(card.dateStore);
+
+        if(
+            !isNaN(cardDate) &&
+            cardDate.getFullYear() === today.getFullYear() &&
+            cardDate.getMonth() === today.getMonth()
+        ){
+            card.style.display = "flex";
+            filteredTotal = filteredTotal + card.amountValueStore;
+        }else{
+            card.style.display = "none";
+        }
+    })
+    total.textContent = "TOTAL : KSH " + filteredTotal.toLocaleString();
+    showAllBtn.style.display = "block";
+    showAllBtn.style.marginTop = "15px"
+}
+
+//Logic to show all cards and reset totals when showall button is clicked
 
 showAllBtn.addEventListener("click", () => {
     let allCards = document.querySelectorAll(".expense-card");
