@@ -52,7 +52,7 @@ nav{
     color: rgb(27, 0, 149);
     text-align: center;
     background:rgb(92, 193, 92);
-    width: 70%;
+    width: 50%;
     margin: 20px auto;
     border-radius: 5px;
     padding: 5px;
@@ -343,6 +343,9 @@ select{
         margin: 60px auto;
         padding: 25px;
         font-size: 13px;
+    }
+    .popup{
+        width: 30%;
     }
     .expense{
         width: 40%;
