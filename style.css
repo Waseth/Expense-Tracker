@@ -11,13 +11,60 @@ body{
 }
 nav{
     display: flex;
-    box-shadow: 0 6px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
     justify-content: center;
-    margin-bottom: 5px;
     padding-bottom: 3px;
     position: relative;
+    margin-bottom: 5px;
 }
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 8px;
+}
+.nav-link {
+    padding: 5px 5px;
+    text-decoration: none;
+    color: rgb(27, 0, 149);
+    font-weight: 400;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 60%;
+    position: relative;
+}
+
+.nav-link.active{
+    background: white;
+}
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: rgb(27, 0, 149);
+    border-radius: 2px;
+}
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.content-section.active-section {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .header img{
     width: 40px;
     margin-right: -10px;
@@ -39,7 +86,8 @@ nav{
     width: 70%;
 }
 #p-div p{
-    color: rgb(27, 0, 149);
+    /* color: rgb(27, 0, 149); */
+    color: black;
 
 }
 #expense-header{
@@ -226,7 +274,6 @@ select{
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     min-height: 200px;
 }
-
 .delete-btn{
     padding: 5px;
     width: 80%;

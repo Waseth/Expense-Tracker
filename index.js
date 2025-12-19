@@ -7,6 +7,43 @@ let expenseList = document.querySelector(".expense-list");
 let total = document.getElementById("total");
 let showAllBtn = document.getElementById("show-all");
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Get all content sections
+    const sections = document.querySelectorAll('.content-section');
+
+    // Add click event listeners to navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Remove active class from all links and sections
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active-section'));
+
+            // Add active class to clicked link
+            this.classList.add('active');
+
+            // Show the corresponding section
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active-section');
+            }
+        });
+    });
+
+    // Show first section by default
+    const activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) {
+        activeLink.click();
+    }
+});
+
 // Global Array for storage(load saved data)
 let savedExpenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
@@ -115,11 +152,6 @@ function addExpense() {
     if (!expenseInput || !amountInput || !categorySelect) {
         showPopUp("Please fill in all the fields!");
         return;// return in the case is used to stop the rest of the code from running if the above if statement evaluates to true which would mean the is not input in at least one input field
-    }
-
-    if (expenseInput.length > 9) {
-        showPopUp("Expense name should not exceed 9 characters!");
-        return;
     }
 
     let numberInput = Number(amountInput);//.value gives a string but we want an actual number that's why we put Number()

@@ -17,7 +17,17 @@
                 <img src="logo.png" alt="logo">
                 <h1>xpensify</h1>
             </nav>
+            <div class="nav-links">
+                <a href="#section1" class="nav-link">Add Expense</a>
+                <a href="#section2" class="nav-link">View Expenses</a>
+                <a href="#section3" class="nav-link">Expense Analytics</a>
+            </div>
+            <hr>
 
+        </section>
+
+        <!-- EXPENSE SECTION -->
+        <section id="section1" class="content-section active-section">
             <div id="p-div">
                 <p class="expensify-paragraph">
                     Keep your finances under control with Expensify. Easily add and categorize every expense, monitor
@@ -26,47 +36,45 @@
                     and stay on top of your budget effortlessly
                 </p>
             </div>
-
+            <h2 id="expense-header">Enter expense details</h2>
+            <div id="popup" class="popup"></div>
+            <section class="expense">
+                <input type="text" placeholder="Expense Name" id="expense-name" autocomplete="off">
+                <input type="text" placeholder="Amount" id="amount" autocomplete="off">
+                <select id="category" autocomplete="off">
+                    <option value="" disabled selected>Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button onclick="addExpense()">Add</button>
+            </section>
         </section>
 
-        <!-- EXPENSE SECTION -->
-        <h2 id="expense-header">Enter expense details</h2>
-        <div id="popup" class="popup"></div>
-        <section class="expense">
-            <input type="text" placeholder="Expense Name" id="expense-name" autocomplete="off">
-            <input type="text" placeholder="Amount" id="amount" autocomplete="off">
-            <select id="category" autocomplete="off">
-                <option value="" disabled selected>Category</option>
-                <option value="Food">Food</option>
-                <option value="Transport">Transport</option>
-                <option value="Shopping">Shopping</option>
-                <option value="Other">Other</option>
-            </select>
-            <button onclick="addExpense()">Add</button>
-        </section>
-
-        <!-- FILTER SECTION -->
-        <h2 id="expense-header" style="margin-top: 15px;">Filter your expenses</h2>
-        <div id="duration">
-            <button class="btn" onclick="dailyFilter()">Daily</button>
-            <button class="btn" onclick="weeklyFilter()">Weekly</button>
-            <button class="btn" onclick="monthlyFilter()">Monthly</button>
-        </div>
-
-        <div class="dropdown">
-            <button onclick="toggleMenu()" id="btn">Category</button>
-            <div id="menu" class="dropdown-menu">
-                <button class="menu">Food</button>
-                <button class="menu">Transport</button>
-                <button class="menu">Shopping</button>
-                <button class="menu">Other</button>
+        <section id="section2" class="content-section">
+            <!-- FILTER SECTION -->
+            <h2 id="expense-header" style="margin-top: 15px;">Filter your expenses</h2>
+            <div id="duration">
+                <button class="btn" onclick="dailyFilter()">Daily</button>
+                <button class="btn" onclick="weeklyFilter()">Weekly</button>
+                <button class="btn" onclick="monthlyFilter()">Monthly</button>
             </div>
-            <button id="show-all">Show All</button>
-        </div>
 
-        <!-- EXPENSE LIST SECTION -->
-        <div class="expense-list">
-            <!-- <div class="expense-card">
+            <div class="dropdown">
+                <button onclick="toggleMenu()" id="btn">Category</button>
+                <div id="menu" class="dropdown-menu">
+                    <button class="menu">Food</button>
+                    <button class="menu">Transport</button>
+                    <button class="menu">Shopping</button>
+                    <button class="menu">Other</button>
+                </div>
+                <button id="show-all">Show All</button>
+            </div>
+
+            <!-- EXPENSE LIST SECTION -->
+            <div class="expense-list">
+                <!-- <div class="expense-card">
                 <div class="expense-text">Lunch</div>
                 <div class="expense-text">Food</div>
                 <div class="expense-text">Ksh 350</div>
@@ -108,11 +116,15 @@
                 <div class="expense-text">Date</div>
                 <button>DELETE</button>
             </div> -->
-        </div>
+            </div>
+        </section>
 
-        <div id="total-div">
-            <h1 id="total">TOTAL : KSH 0</h1>
-        </div>
+        <!-- SECTION 3: Analytics -->
+        <section id="section3" class="content-section">
+            <div id="total-div">
+                <h1 id="total">TOTAL : KSH 0</h1>
+            </div>
+        </section>
 
     </div>
 
